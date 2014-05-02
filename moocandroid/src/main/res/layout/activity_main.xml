@@ -22,7 +22,10 @@
         android:id="@+id/editTextName"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textViewLabelName"
-        android:layout_toLeftOf="@+id/buttonNameValidation" />
+        android:layout_toLeftOf="@+id/buttonNameValidation"
+        android:hint="@string/hint_name"
+        android:autoText="false"
+        android:textSize="12sp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -30,9 +33,9 @@
         android:layout_height="wrap_content"
         android:text="@string/button_ok"
         android:id="@+id/buttonNameValidation"
-        android:layout_alignBottom="@+id/editTextName"
-        android:layout_alignEnd="@+id/scrollView"
-        android:onClick="onButtonNameClick" />
+        android:onClick="onButtonNameClick"
+        android:layout_above="@+id/listView"
+        android:layout_alignEnd="@+id/listView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -42,7 +45,9 @@
         android:id="@+id/editTextMessage"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/buttonSendMessage" />
+        android:layout_toLeftOf="@+id/buttonSendMessage"
+        android:textSize="12sp"
+        android:hint="@string/hint_message" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -52,21 +57,18 @@
         android:id="@+id/buttonSendMessage"
         android:layout_alignBottom="@+id/editTextMessage"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/editTextMessage" />
+        android:layout_alignTop="@+id/editTextMessage"
+        android:onClick="onButtonSendMessageClick"
+        android:enabled="false" />
 
-    <ScrollView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_below="@+id/buttonNameValidation"
-        android:layout_alignParentStart="true"
+        android:id="@+id/listView"
+        tools:listitem="@layout/row"
+        android:layout_below="@+id/textViewLabelName"
         android:layout_above="@+id/editTextMessage"
-        android:layout_alignEnd="@+id/buttonSendMessage" >
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listView" />
-    </ScrollView>
+        android:footerDividersEnabled="false"
+        android:smoothScrollbar="true" />
 
 </RelativeLayout>

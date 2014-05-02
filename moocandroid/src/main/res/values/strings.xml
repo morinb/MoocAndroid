@@ -6,7 +6,10 @@
     <string name="label_name">Entrez votre nom :</string>
     <string name="welcome_name">Bienvenue </string>
 
-    <string name="button_ok">Ok</string>
+    <string name="button_ok">OK</string>
     <string name="send_message">Envoyer</string>
+    <string name="from">de</string>
+    <string name="hint_name">Ecrivez votre nom ici</string>
+    <string name="hint_message">Ecrivez votre message ici</string>
 
 </resources>
