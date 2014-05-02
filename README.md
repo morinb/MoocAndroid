@@ -1,0 +1,4 @@
+MoocAndroid
+===========
+
+Android initiation application.
